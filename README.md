@@ -1,37 +1,178 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Mozilla splash page</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <style>
+      /* header and body setup */
 
-You can use the [editor on GitHub](https://github.com/ishahryar/responsive-images/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+      html {
+        font-family: 'Open Sans', sans-serif;
+        background: url(pattern.png);
+      }
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+      body {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+        position: relative;
+      }
 
-### Markdown
+      /* Header styling */
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+      header {
+        height: 150px;
+      }
 
-```markdown
-Syntax highlighted code block
+      header img {
+        width: 100px;
+        position: absolute;
+        right: 32.5px;
+        top: 32.5px;
+      }
 
-# Header 1
-## Header 2
-### Header 3
+      h1 {
+        font-size: 50px;
+        line-height: 140px;
+        margin: 0 0 0 32.5px;
+      }
 
-- Bulleted
-- List
+      /* main section and video styling */
 
-1. Numbered
-2. List
+      main {
+        background: #ccc;
+      }
 
-**Bold** and _Italic_ and `Code` text
+      article {
+        padding: 20px;
+      }
 
-[Link](url) and ![Image](src)
-```
+      h2 {
+        margin-top: 0;
+      }
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+      p {
+        line-height: 2;
+      }
 
-### Jekyll Themes
+      iframe {
+        float: left;
+        margin: 0 20px 20px 0;
+        max-width: 100%;
+      }
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ishahryar/responsive-images/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+      /* further info links */
 
-### Support or Contact
+      .further-info {
+        clear: left;
+        padding: 40px 0;
+        background: #c13832;
+        box-shadow: inset 0 3px 2px rgba(0,0,0,0.5),
+                    inset 0 -3px 2px rgba(0,0,0,0.5);
+      }
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+      .further-info a {
+        width: 25%;
+        display: block;
+        float: left;
+      }
+
+      .further-info img {
+        max-width: 100%;
+      }
+
+      .clearfix {
+        clear: both;
+      }
+
+      /* Red panda image */
+
+      .red-panda img {
+        display: block;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Mozilla</h1>
+      <!-- insert <img> element, link to the small
+          version of the Firefox logo -->
+
+      <img src="firefox_logo-only_RGB120.png" alt="Firefox Logo">
+
+    </header>
+
+    <main>
+      <article>
+        <!-- insert iframe from youtube -->
+      
+          
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/LtOGa5M8AuU" frameborder="0" allow="accelerometer; autoplay; mute; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          
+        <p>
+          <a href="https://www.youtube.com/embed/LtOGa5M8AuU">Fallback link for browsers that don't support iframes</a>
+        </p>
+
+
+        </iframe>
+
+
+
+        <h2>Rocking the free web</h2>
+
+        <p>Mozilla are a global community of technologists, thinkers, and builders, working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+
+        <p>Click on the images below to find more information about the cool stuff Mozilla does. <a href="https://www.flickr.com/photos/mathiasappel/21675551065/">Red panda picture</a> by Mathias Appel.</p>
+      </article>
+
+      <div class="further-info">
+        <!-- insert images with srcsets and sizes -->
+        <a href="https://www.mozilla.org/en-US/firefox/new/">
+          <img srcset="firefox_logo-only_RGB120.png 120w"
+               sizes="(max-width: 500px) 120px, 400px"
+               src="firefox_logo-only_RGB400.png"
+               alt="Firefox logo" 
+          >
+        </a>
+        <a href="https://www.mozilla.org/">
+          <img srcset="mozilla-dinosaur-head120.png 120w" 
+              sizes="(max-width: 500px) 120px, 400px" 
+              src="mozilla-dinosaur-head400.png" 
+              alt="Mozilla Dinosaur Head Picuture" 
+          >
+        </a>
+        <a href="https://addons.mozilla.org/">
+          <img srcset="firefox-addons120.jpg 120w" 
+          sizes="(max-width: 500px) 120px, 400px" 
+          src="firefox-addons400.jpg" 
+          alt="Firefox Addons Logo" 
+          >
+        </a>
+        <a href="https://developer.mozilla.org/en-US/">
+          <img srcset="https://raw.githubusercontent.com/mdn/learning-area/72d7a7ec82942a0daed186c3b1dabff4a020d349/html/multimedia-and-embedding/mdn-splash-page-start/originals/mdn.svg" 
+          sizes="(max-width: 500px) 120px, 400px" 
+          src="https://raw.githubusercontent.com/mdn/learning-area/72d7a7ec82942a0daed186c3b1dabff4a020d349/html/multimedia-and-embedding/mdn-splash-page-start/originals/mdn.svg"
+          alt="The SVG Picture of Dinosaur Head Outline"
+          >
+        </a>
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="red-panda">
+        <!-- insert picture element -->
+        <picture>
+             <source media="(max-width: 600px)" src="red-panda600art.jpg">
+             <img src="red-panda1200.jpg" alt="Picture of a Panda">
+        </picture>
+
+      </div>
+
+    </main>
+  </body>
+</html>
+
+
